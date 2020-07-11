@@ -31,6 +31,34 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+.timer {
+	height: 30%;
+	border-radius: 50px;
+	background: linear-gradient(145deg, #e0e2e7, #eeeff1);
+	box-shadow: 20px 20px 15px #e0e0e0, -15px -15px 20px #ffffff;
+	margin-right: 1vw;
+	width: 80vw;
+	margin: 0 auto;
+}
+.time {
+    font-size: 90px;
+    line-height: 90px;
+    font-weight: 800;
+}
+
+.box {
+    float: left;
+    margin: 0 10px;
+    width: 160px;
+    text-align: center;
+    color: rgb(160, 160, 160);
+}
+
+.title {
+    letter-spacing: 4px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 html,
 body {
 	height: 100%;
