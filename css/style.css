@@ -31,32 +31,140 @@
 /* Template default CSS
 /*----------------------------------------*/
 
-.timer {
-	height: 30%;
-	border-radius: 50px;
-	background: linear-gradient(145deg, #e0e2e7, #eeeff1);
-	box-shadow: 20px 20px 15px #e0e0e0, -15px -15px 20px #ffffff;
-	margin-right: 1vw;
-	width: 80vw;
+@media screen and (min-width: 1280px) {
+	.countdown__timer{
+		width: 45vw;
+		font-size: 50px;
+		height: 30%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.countdown__timer{
+		width: 45vw;
+		font-size: 50px;
+		height: 30%;
+	}
+}
+
+@media screen and (max-width: 1095px) {
+	.countdown__timer{
+		width: 55vw;
+		font-size: 50px;
+		height: 30%;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.countdown__timer{
+		width: 60vw;
+		font-size: 50px;
+		height: 30%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.countdown__timer{
+		width: 65%;
+		font-size: 35px;
+		height: 15%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.countdown__timer{
+		width: 65%;
+		font-size: 35px;
+		height: 15%;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.countdown__timer{
+		width: 75vw;
+		font-size: 30px;
+		height: 15%;
+	}
+}
+
+@media screen and (max-width: 372px) {
+	.countdown__timer{
+		width: 98%;
+		font-size: 25px;
+		height: 15%;
+	}
+}
+
+.time{
+	margin-left: 2vw;
+	color: #fff;
+	float: left;
+}
+
+#timer_start {
+	text-align: center;
+}
+
+@media screen and (min-width: 1296px) {
+	#margin__left {
+		margin-left: 8vw;
+	}
+}
+
+@media screen and (max-width: 1295px) {
+	#margin__left {
+		margin-left: 6vw;
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	#margin__left {
+		margin-left: 4vw;
+	}
+}
+
+@media screen and (max-width: 1095px) {
+	#margin__left {
+		margin-left: 7vw;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	#margin__left {
+		margin-left: 5vw;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#margin__left {
+		margin-left: 4vw;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#margin__left {
+		margin-left: 3vw;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	#margin__left {
+		margin-left: 10vw;
+	}
+}
+@media screen and (max-width: 372px) {
+	#margin__left {
+		margin-left: 13vw;
+	}
+}
+
+
+.countdown__timer {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #2e3649, #1b2331);
+    box-shadow: 20px 20px 50px #222e3d, -15px -15px 40px #191c38;
+    margin-right: 1vw;
 	margin: 0 auto;
-}
-.time {
-    font-size: 90px;
-    line-height: 90px;
-    font-weight: 800;
-}
-
-.box {
-    float: left;
-    margin: 0 10px;
-    width: 160px;
-    text-align: center;
-    color: rgb(160, 160, 160);
-}
-
-.title {
-    letter-spacing: 4px;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 html,
@@ -888,9 +996,7 @@ ol {
   Countdown
 -----------------------*/
 
-.countdown {
-	padding-bottom: 560px;
-}
+
 
 .countdown.countdown--page {
 	padding-top: 150px;
@@ -2876,9 +2982,6 @@ ol {
 	.tours__item__text {
 		padding-right: 0;
 	}
-	.countdown {
-		padding-bottom: 940px;
-	}
 	.footer {
 		margin-top: -940px;
 		background-position: top 0 left 19%;
@@ -2951,9 +3054,6 @@ ol {
 	}
 	.blog__details__tags a {
 		margin-bottom: 10px;
-	}
-	.countdown {
-		padding-bottom: 980px;
 	}
 	.footer {
 		margin-top: -970px;

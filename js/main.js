@@ -34,7 +34,7 @@
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
-    
+
     /*--------------------------
         Event Slider
     ----------------------------*/
@@ -44,7 +44,7 @@
         items: 3,
         dots: false,
         nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true,
@@ -60,7 +60,7 @@
             },
         }
     });
-    
+
     /*--------------------------
         Videos Slider
     ----------------------------*/
@@ -70,7 +70,7 @@
         items: 4,
         dots: false,
         nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true,
@@ -115,14 +115,30 @@
     // }
     // var timerdate = mm + '/' + dd + '/' + yyyy;
     // For demo preview end
-    
+
 
     // Use this for real timer date
-    var timerdate = "2020/08/22";
+    // var timerdate = "2020/08/22";
 
-	$("#countdown-time").countdown(timerdate, function(event) {
-        $(this).html(event.strftime("<div class='countdown__item'><span>%D</span> <p>Days</p> </div>" + "<div class='countdown__item'><span>%H이거시발 시간 수정좀해봐</span> <p>Hours</p> </div>" + "<div class='countdown__item'><span>%M</span> <p>Minutes</p> </div>" + "<div class='countdown__item'><span>%S</span> <p>Seconds</p> </div>"));
-    });
+    // $("#countdown-time").countdown(timerdate, function(event) {
+    //     $(this).html(event.strftime("<div class='countdown__item'><span>%D</span> <p>Days</p> </div>" + "<div class='countdown__item'><span>%H이거시발 시간 수정좀해봐</span> <p>Hours</p> </div>" + "<div class='countdown__item'><span>%M</span> <p>Minutes</p> </div>" + "<div class='countdown__item'><span>%S</span> <p>Seconds</p> </div>"));
+    // });
+    var countDownDate = new Date("August 22, 2020 18:00:00").getTime();
+    var x = setInterval(function () {
+        var time = new Date().getTime();
+        var timeleft = countDownDate - time;
+
+        var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+        document.getElementById("timer_start").innerHTML = '<div class="box time" id="margin__left">' + days + 'd' + '</div><div class="box time">' + hours + 'h' + '</div><div class="box time">' + minutes + 'm' + '</div><div class="box time">' + seconds + 's' + '</div>';
+
+    }, 1000);
 
     /*------------------
 		Barfiller
